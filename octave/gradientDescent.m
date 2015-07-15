@@ -36,7 +36,7 @@ for iter = 1:num_iters
   delta = ((1 / m) * sum(presum, 1));
   theta = theta - (alpha * (delta'));
     
-  J_history(iter) = computeCost(X, y, theta);
+  J_history(iter) = computeCostGrad(X, y, theta);
 end
 
 endfunction

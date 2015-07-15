@@ -20,12 +20,6 @@ function testGradientDescent
 %! fail ('gradientDescent([2], [3], [], 0.01, 10)');
 %!endfunction
 
-%!function shouldRaiseErrorWhenNumRowsInThetaDoNotMatchNumColsInX
-%! fail ('computeCost([0], [1], [1; 2])');
-%! fail ('computeCost([1 2; 2 3], [3; 7], [0.5])');
-%! fail ('computeCost([1 2], [3], [])');
-%!endfunction
-
 %!function shouldReturnSameThetaWhenNumItersIsZero
 %! [theta, J_history] = gradientDescent([1 0], [1], [1; 2], 0.01, 0);
 %! assert(theta, [1; 2]);
@@ -51,7 +45,6 @@ function testGradientDescent
 %! shouldRaiseErrorWhenAlphaNegative();
 %! shouldRaiseErrorWhenNumRowsInXDoesNotMatchY();
 %! shouldRaiseErrorWhenFirstColInXNotSetToZeros();
-%! shouldRaiseErrorWhenNumRowsInThetaDoNotMatchNumColsInX();
 %! shouldReturnSameThetaWhenNumItersIsZero();
 %! shouldReturnCorrectValuesForThetaVector();
 endfunction

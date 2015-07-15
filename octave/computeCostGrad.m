@@ -1,4 +1,4 @@
-function J = computeCost(X, y, theta)
+function J = computeCostGrad(X, y, theta)
 
 % Uses squared error cost function as described in Stanford CS 229
 
