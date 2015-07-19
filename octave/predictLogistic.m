@@ -1,4 +1,4 @@
-function p = predict(theta, X)
+function p = predictLogistic(theta, X)
 %PREDICT Predict whether the label is 0 or 1 using learned logistic 
 %regression parameters theta
 
